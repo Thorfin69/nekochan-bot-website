@@ -1,4 +1,3 @@
-import './Patreon.css'
 
 
 export default function patreon () {
