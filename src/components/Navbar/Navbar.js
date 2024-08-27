@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AlignJustify } from 'lucide-react';
 import Router from 'next/router';
-import NProgress from 'nprogress';
+// import NProgress from 'nprogress';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
