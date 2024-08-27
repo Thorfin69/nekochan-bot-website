@@ -1,3 +1,4 @@
+import MaxWidthWrapper from "@/components/Reusables/MaxWItdhWrapper";
 
 
 
@@ -5,7 +6,9 @@ export default function PearlsShop() {
 
 
     return (
-        <h1>This Is Pearls Shop</h1>
+       <MaxWidthWrapper>
+         <h1 className="title text-3xl ">This Is Pearls Shop</h1>
+       </MaxWidthWrapper>
 
     )
 }

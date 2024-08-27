@@ -2,32 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import '~nprogress/nprogress.css'; 
 * {
-  font-family: 'Roboto' , sans-serif
-}
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Variables  */
+:root {
+  --bg-color: #1E1E1E;
+  --font-pri: #ffff;
+  --button-bg: #2F4F4F;
+
+
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--bg-color);
 }
 
 @layer utilities {
@@ -36,3 +26,60 @@ body {
   }
 }
 
+
+
+/* 
+
+███████  ██████  ███    ██ ████████     ███████ ████████ ██    ██ ██      ███████ ███████ 
+██      ██    ██ ████   ██    ██        ██         ██     ██  ██  ██      ██      ██      
+█████   ██    ██ ██ ██  ██    ██        ███████    ██      ████   ██      █████   ███████ 
+██      ██    ██ ██  ██ ██    ██             ██    ██       ██    ██      ██           ██ 
+██       ██████  ██   ████    ██        ███████    ██       ██    ███████ ███████ ███████ 
+                                                                                          
+                                                                                          
+ */
+
+.title {
+  font-weight: bolde;
+  color: var(--font-pri);
+
+}
+
+/*
+ █████  ███    ██ ██ ███    ███  █████  ████████ ██  ██████  ███    ██ ███████ 
+██   ██ ████   ██ ██ ████  ████ ██   ██    ██    ██ ██    ██ ████   ██ ██      
+███████ ██ ██  ██ ██ ██ ████ ██ ███████    ██    ██ ██    ██ ██ ██  ██ ███████ 
+██   ██ ██  ██ ██ ██ ██  ██  ██ ██   ██    ██    ██ ██    ██ ██  ██ ██      ██ 
+██   ██ ██   ████ ██ ██      ██ ██   ██    ██    ██  ██████  ██   ████ ███████ 
+*/
+
+/* navbar animations  */
+.nav-buttons {
+  color: rgb(255, 255, 255);
+  border-radius: 2px;
+  border: solid 2px transparent;
+  transition: transform 0.2s ease-in-out, border-radius 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.nav-buttons:hover {
+  transform: translateY(-3px);
+  background-color: var(--button-bg-hover);
+  /* Define this variable */
+  border-radius: 2px;
+  border: solid 1px #fff;
+  /* Change the border on hover */
+  text-decoration-line: underline;
+}
+
+/* Progress Bar Styles */
+#nprogress .bar {
+  @apply fixed top-[50px] left-0 w-full bg-blue-500 h-2 z-50;
+}
+
+#nprogress .peg {
+  @apply shadow-none;
+}
+
+#nprogress .spinner {
+  @apply hidden;
+}
