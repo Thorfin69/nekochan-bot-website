@@ -1,16 +1,11 @@
 import MaxWidthWrapper from "@/components/Reusables/MaxWItdhWrapper";
 
+export default function Store() {
 
-
-
-
-export default function Guide() {
 
     return(
         <MaxWidthWrapper>
-            <h1 className="title text-4xl"> Working on it</h1>
+            <h1 className="title md:text-4xl">Hax</h1>
         </MaxWidthWrapper>
     )
-
-
 }

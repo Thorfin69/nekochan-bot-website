@@ -1,20 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import '~nprogress/nprogress.css'; 
-* {
-  font-family: 'Roboto', sans-serif;
-}
 
+/* imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import '~nprogress/nprogress.css';  */
 /* Variables  */
 :root {
   --bg-color: #1E1E1E;
   --font-pri: #ffff;
   --button-bg: #2F4F4F;
+  /* fonts  */
+  --font-roboto: 'Roboto', sans-serif;
+  --font-nerko: 'Nerko One', cursive;
+  --font-comic: 'Comic Neue', cursive;
+  --font-source: 'Source Code Pro', cursive; 
+  /* colours */
 
+  /* Soft Pastels */
+  --light-pink: #F7CAC9;
+  --soft-lavender: #C3B1E1;
+  --mint-green: #A8E6CF;
+  --peach: #FFD3B6;
+  --powder-blue: #B3CDE0;
+  --blush-pink: #FFC3D8;
 
+  /* Muted Earth Tones */
+  --warm-beige: #D2B48C;
+  --olive-green: #A9BA9D;
+  --terracotta: #E2725B;
+  --slate-gray: #708090;
+  --dusty-rose: #D3A6A1;
+  --sage-green: #9CAD9C;
+
+  /* Bold and Vibrant */
+  --coral: #FF6F61;
+  --teal: #008080;
+  --golden-yellow: #FFD700;
+  --indigo: #4B0082;
+  --bright-turquoise: #00CED1;
+  --magenta: #FF00FF;
+
+  /* Monochrome Elegance */
+  --charcoal-black: #333333;
+  --ivory: #FFFFF0;
+  --slate-gray: #708090;
+  --pale-gray: #E0E0E0;
+  --midnight-blue: #191970;
+  --silver: #C0C0C0;
+
+  /* Retro Vibes */
+  --burnt-orange: #CC5500;
+  --mustard-yellow: #FFDB58;
+  --turquoise: #40E0D0;
+  --rust: #B7410E;
+  --olive-green: #808000;
+
+  /* Minimalist and Clean */
+  --soft-white: #FAFAFA;
+  --cool-gray: #D6D6D6;
+  --light-beige: #F5F5DC;
+  --warm-gray: #BEBEBE;
+  --soft-peach: #FFE5B4;
+  --light-taupe: #D2B48C;
+
+  /* Dark and Moody */
+  --deep-plum: #5D3A3A;
+  --dark-olive-green: #556B2F;
+  --midnight-blue: #2C3E50;
+  --dusty-gray: #7F8C8D;
+  --forest-green: #2E8B57;
+  --charcoal: #36454F;
+
+  /* Playful and Fun */
+  --bubblegum-pink: #FF69B4;
+  --electric-blue: #7DF9FF;
+  --bright-yellow: #FFD700;
+  --sky-blue: #87CEEB;
+  --tangerine: #FF4500;
+  --aqua: #00FFFF;
+
+  /* Elegant and Luxurious */
+  --gold: #FFD700;
+  --royal-blue: #4169E1;
+  --burgundy: #800020;
+  --champagne: #F7E7CE;
+  --emerald-green: #50C878;
+  --cream: #FFFDD0;
+
+  /* Vintage and Nostalgic */
+  --sepia: #704214;
+  --antique-white: #FAEBD7;
+  --rusty-red: #B7410E;
+  --pale-gold: #E6BE8A;
+  --old-rose: #C08081;
+  --faded-olive: #8A9A5B;
 }
+  
+
+
 
 body {
   background-color: var(--bg-color);
@@ -26,6 +113,148 @@ body {
   }
 }
 
+/* nevbar stylings  */
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+/* 
+███████╗ ██████╗ ███╗   ██╗████████╗███████╗
+██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝
+█████╗  ██║   ██║██╔██╗ ██║   ██║   ███████╗
+██╔══╝  ██║   ██║██║╚██╗██║   ██║   ╚════██║
+██║     ╚██████╔╝██║ ╚████║   ██║   ███████║
+╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                            
+*/
+
+.roboto {
+  font-family: var(--font-roboto);
+}
+
+.nerko {
+  font-family: var(--font-nerko);
+}
+
+.comic {
+  font-family: var(--font-comic);
+}
+
+
+
+
+/* 
+███╗   ███╗ █████╗ ██╗███╗   ██╗    ██████╗  █████╗  ██████╗ ███████╗     ██████╗███████╗███████╗
+████╗ ████║██╔══██╗██║████╗  ██║    ██╔══██╗██╔══██╗██╔════╝ ██╔════╝    ██╔════╝██╔════╝██╔════╝
+██╔████╔██║███████║██║██╔██╗ ██║    ██████╔╝███████║██║  ███╗█████╗      ██║     ███████╗███████╗
+██║╚██╔╝██║██╔══██║██║██║╚██╗██║    ██╔═══╝ ██╔══██║██║   ██║██╔══╝      ██║     ╚════██║╚════██║
+██║ ╚═╝ ██║██║  ██║██║██║ ╚████║    ██║     ██║  ██║╚██████╔╝███████╗    ╚██████╗███████║███████║
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝     ╚═════╝╚══════╝╚══════╝
+                                                                                                 
+*/
+
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card1 {
+  left: 150px;
+  transform: scale(.95) rotate(-5deg);
+
+}
+
+.card2 {
+  z-index: 2;
+  margin-bottom: 0px;
+  
+}
+
+.card3 {
+  right: 100px; 
+  transform: scale(.95) rotate(5deg)
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  z-index: 3; /* Bring the card to the front */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+/* responsive  */
+
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100px;
+    height: 140.2px;
+  }
+
+  .card1 {
+    left: 65px;
+    transform: scale(.95) rotate(-6deg);
+  }
+  .card2 {
+    z-index: 2;
+  }
+
+  .card3 {
+    right: 65px;
+  }
+}
+
+.mp-bt {
+  color: red;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mp-bt:hover {
+  background-color: var(--indigo);
+  color: white;
+  border-color: var(--indigo);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mp-bt:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 
 /* 
@@ -41,8 +270,7 @@ body {
 
 .title {
   font-weight: bolde;
-  color: var(--font-pri);
-
+  color: var(--indigo);
 }
 
 /*
